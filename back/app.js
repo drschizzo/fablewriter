@@ -13,11 +13,12 @@ const corsOptions = {
 
 var indexRouter = require('./routes/index');
 var storyRouter = require('./routes/storygen');
+var imageRouter = require('./routes/imagegen');
 
 var app = express();
 
   // Activation de CORS pour toutes les requêtes
-  app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,5 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/storygen', storyRouter);
+app.use('/imagegen', imageRouter);
 
 module.exports = app;
