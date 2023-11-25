@@ -1,0 +1,6 @@
+<ng-container *ngIf="!imgUrl || imgUrl.length==0">
+<p>Images : {{prompt}}</p>
+<button (click)="genImage()">Get Images</button>
+</ng-container>
+<img *ngIf="imgUrl" [src]="imgUrl" alt="image" width="500" height="600">
+
