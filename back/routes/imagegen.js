@@ -27,7 +27,7 @@ router.get('/', async function(req, res) {
             model: "dall-e-3",
             prompt: prompt,
             n: 1,
-            size: "1024x1024",
+            size: "256x256",
           });
           image_url = image.data;
     }
