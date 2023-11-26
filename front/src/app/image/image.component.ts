@@ -8,7 +8,7 @@ import { StorygenService } from '../storygen.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './image.component.html',
-  styleUrl: './image.component.sass'
+  styleUrl: './image.component.scss'
 })
 export class ImageComponent implements OnChanges{
 

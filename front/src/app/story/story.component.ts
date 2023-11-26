@@ -6,7 +6,7 @@ import { ImageComponent } from "../image/image.component";
     selector: 'app-story',
     standalone: true,
     templateUrl: './story.component.html',
-    styleUrl: './story.component.sass',
+    styleUrl: './story.component.scss',
     imports: [CommonModule, ImageComponent]
 })
 export class StoryComponent implements OnInit, OnChanges {

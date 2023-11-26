@@ -10,7 +10,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
-    styleUrl: './app.component.sass',
+    styleUrl: './app.component.scss',
     imports: [CommonModule, RouterOutlet, StoryComponent,ReactiveFormsModule]
 })
 export class AppComponent implements OnInit {
