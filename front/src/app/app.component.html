@@ -1,5 +1,9 @@
 <h1>Welcome to FableWriter</h1>
 
+<button (click)="genStory()">Créer une histoire</button>
+<input type="text" [formControl]="prompt" placeholder="id de l'histoire">
+<input type="checkbox" checked="true" [formControl]="isDemo">Demo mode
+
 <app-story [story]="story |async"></app-story>
 
 

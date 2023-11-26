@@ -16,7 +16,7 @@ export class StorygenService {
       responseType: 'json',
       observe: 'body',
       params: {
-        'demo': 'true',
+        'demo': demo || false,
         'prompt': prompt
       }
     })
@@ -28,7 +28,7 @@ export class StorygenService {
       responseType: 'text',
       observe: 'body',
       params: {
-        'demo': false,
+        'demo': demo || false,
         'prompt': prompt
       }
     })

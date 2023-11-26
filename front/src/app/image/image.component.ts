@@ -23,10 +23,10 @@ export class ImageComponent implements OnChanges{
   }
 
   genImage() {
+    
     this.storygen.getImage(this.prompt,true).subscribe((res:any) => {
       this.imgUrl=res;
-    }
-    )
+    })
   }
 
   ngOnChanges(changes:any): void {

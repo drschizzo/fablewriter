@@ -1,6 +1,6 @@
 <p>story works!</p>
 
-<ng-container *ngFor="let s of story">
+<ng-container *ngFor="let s of story.story">
     <app-image [prompt]="s.desc"></app-image>
   <p >{{s.text}}</p>
 
