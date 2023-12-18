@@ -1,210 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-:root {
-  // colors______________
-  // // dark
-  // --clr-body-dark: white;
-  // --clr-bg-dark: black;
-  // // light
-  // --clr-body-light: black;
-  // --clr-bg-light: hsl(0, 0%, 100%);
-
-  // --foreground: var(--clr-body-light);
-  // --background: var(--clr-body-dark);
-
-  --clr-green-500:#18534F;
-  --clr-green-400:#226D68;
-  --clr-green-100:#ECF8F6;
-
-  --clr-gold-400:#D6955B;
-  --clr-gold-200:#FEEAA1;
-
-  // font-family
-  --ff-primary: "Poppins", sans-serif;
-
-  --ff-body: var(--ff-primary);
-  --ff-heading: var(--ff-primary);
-  
-  // font-weight
-  --fw-regular: 400;
-  --fw-semi-bold: 500;
-  --fw-bold: 700;
-
-
-
-}
-
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     --background: var(--clr-bg-light);
-//     --foreground: var(--clr-bg-dark);
-//   }
-// }
-/* RESET____________________________________________________________ */
-/* https://piccalil.li/blog/a-modern-css-reset */
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  min-height: 100%;
-  overflow-x: hidden;
-}
-
-/* Set core body defaults */
-body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-/* RESET____________________________________________________________ */
-
-/* general styling_________________________________________________ */
-
-html {
-  color-scheme: light dark;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.06825rem;
-  font-weight: 500;
-  font-family: var(--ff-body);
-  color: var(--clr-green-500);
-  background-color: var(--clr-green-100);
-}
-
-section {
-  border: 1px solid red;
-  padding-block: min(10vh, 10rem);
-}
-
-.container {
-  border:1px solid orange;
-  --max-width: 1110px;
-  --container-padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
-  margin-inline: auto;
-}
-/* skip to main content */
-.skip-nav-link{
-  background: black;
-  padding:0.5rem 1.5rem;
-  border-radius: 0 0 0.25rem 0.25rem;
-  position:absolute;
-  left:0.5rem;
-  transform: translateY(-150%);
-  transition: transform 325ms ease-in;
-}
-
-.skip-nav-link:focus{
-  transform: translateY(0);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
-}
-
-h1 {
-  font-size: clamp(2.7994rem, 1.8077rem + 4.9585vw, 5.3406rem);
-  font-weight: 700;
-  line-height: 1.1;
-}
-h2 {
-  font-size: clamp(1.85rem, 1rem + 4vw, 3rem);
-}
-
-h3 {
-  font-size: clamp(1.15rem, 1rem + 3vw, 1.25rem);
-}
-
-a:not([class]) {
-  color: inherit;
-  opacity: 0.7;
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
-}
-
-p:not([class]) {
-  opacity: 0.7;
-  max-width: 48ch;
-}
-
-p[data-width="wide"] {
-  max-width: 42ch;
-  // overflow-wrap: break-word;
-  // hyphens: auto;
-}
-
-:where(ul, ol):where([role="list"]) {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 
 //button
 
@@ -212,13 +5,13 @@ p[data-width="wide"] {
   display: inline-flex;
   cursor: pointer;
   text-decoration: none;
-  border: 0;
+  border: 1px solid black;
   border-radius: 100vmax;
   padding: 1.25em 2.5em;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1;
-  color: black;
+  color: white;
   background-color: var(--clr-green-400);
   box-shadow: 0 1.125em 1em -1em var(--clr-green-500);
 }
@@ -235,6 +28,12 @@ p[data-width="wide"] {
     display: inline-flex;
   }
 }
+
+
+// header
+
+
+
 
 // hero
 
@@ -352,6 +151,11 @@ p[data-width="wide"] {
 
 // form
 // form {
+//   border:1px solid lime;
 //   margin: 2em auto;
-//   max-width: 750px;
+
+// }
+
+// .story-rendering{
+//   border:2px sold lime;
 // }

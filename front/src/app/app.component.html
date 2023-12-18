@@ -13,10 +13,10 @@
 
       <nav aria-label="primary navigation" class="primary-nav">
         <ul role="list" class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">sign up</a></li>
+          <li><a href="#">login</a></li>
+          <!-- hidden unless you're logged in -->
+          <li class=""><a href="#">logout</a></li>
         </ul>
       </nav>
       <button class="button btn--sm">Start</button>
@@ -85,28 +85,33 @@
   <section class="form">
     <div class="container">
       <div class="columns">
-        <div class="form-group">
-          <label for=""></label>
-          <input
-            type="text"
-            [formControl]="prompt"
-            placeholder="prompt de l histoire"
-            class="form-control"
-            id=""
-          />
+
+        <div class="story-settings">
+          <div class="form-group">
+            <label for=""></label>
+            <input
+              type="text"
+              [formControl]="prompt"
+              placeholder="prompt de l histoire"
+              class="form-control"
+              id=""
+            />
+          </div>
+
+          <div class="form-group">
+            <label for=""></label>
+            <input type="checkbox" checked="true" [formControl]="isDemo" />Demo
+            mode
+          </div>
+
+          <button (click)="genStory()" class="button btn--bg">
+            Créer une histoire
+          </button>
         </div>
 
-        <div class="form-group">
-          <label for=""></label>
-          <input type="checkbox" checked="true" [formControl]="isDemo" />Demo
-          mode
+        <div class="story-rendering">
+          <app-story [story]="story | async"></app-story>
         </div>
-
-        <button (click)="genStory()">Créer une histoire</button>
-      </div>
-
-      <div class="story-rendering">
-        <app-story [story]="story | async"></app-story>
       </div>
     </div>
   </section>
