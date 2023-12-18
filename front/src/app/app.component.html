@@ -1,38 +1,90 @@
-
-
 <header class="primary-header">
   <div class="container">
-    <a class="skip-nav-link" href="#main-content">
-      skip navigation
-    </a>
-    <nav aria-label="primary navigation" class="primary-nav">
-      <ul role="list" class="nav-list">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Books</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
+    <a class="skip-nav-link" href="#main-content"> skip navigation </a>
+    <div class="nav-wrapper">
+      <a href="#"><img src="" alt="logo FaleWriter" /></a>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav aria-label="primary navigation" class="primary-nav">
+        <ul role="list" class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="button btn--sm">Start</button>
+    </div>
   </div>
 </header>
 
-
-
 <main id="main-content">
-
-
-  
   <section class="hero">
     <div class="container">
-      <h1>Welcome to FableWriter</h1>
-      <p>A fable generator / creator..</p>
+      <div class="columns">
+        <div>
+          <h1 class="primary-heading">Welcome to FableWriter..</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit autem
+            optio recusandae accusantium necessitatibus fuga eius laboriosam,
+            provident quam accusamus?
+          </p>
+          <button class="button">Start</button>
+        </div>
+        <div class="hero__image">
+          <img class="" src="" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fableSteps">
+    <div class="container">
+      <div class="columns">
+        <div>
+          <h2 class="secondary-heading">What different about FableWriter?</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
+            culpa expedita neque autem quam minus sint similique quia dolores
+            iusto.
+          </p>
+        </div>
+
+        <div>
+          <ul class="steps" role="list">
+            <li>
+              <div>
+                <h3 class="step__title">Lorem ipsum dolor sit.</h3>
+                <p class="step__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facere et mollitia quaerat dicta laudantium iste!
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3 class="step__title">Lorem ipsum dolor sit.</h3>
+                <p class="step__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facere et mollitia quaerat dicta laudantium iste!
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="form">
     <div class="container">
-
-      <div>
+      <div class="columns">
         <div class="form-group">
           <label for=""></label>
           <input
@@ -53,24 +105,15 @@
         <button (click)="genStory()">Créer une histoire</button>
       </div>
 
-
       <div class="story-rendering">
         <app-story [story]="story | async"></app-story>
       </div>
-
-      
     </div>
   </section>
-  
-
-
-
 </main>
 
 <footer>
-  <div class="container">
-    <p>2023</p>
-  </div>
+  <div class="container"></div>
 </footer>
 
 <router-outlet></router-outlet>
